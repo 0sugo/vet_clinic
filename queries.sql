@@ -10,3 +10,6 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 BEGIN;
 UPDATE animals SET species = 'unspecified';
 ROLLBACK;
+-- Update the animals table by setting the species column to digimon for all animals that have a name ending in mon.
+BEGIN;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon%';
