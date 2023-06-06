@@ -20,3 +20,12 @@ UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon%';
 
 -- Update the animals table by setting the species column to pokemon for all animals that don't have species already set.
 UPDATE animals SET species = 'pokeman' WHERE species !='digimon'OR species IS NULL;
+
+-- Commit the transaction.
+COMMIT;
+
+-- TRANSACTION 3
+BEGIN;
+-- delete all records in the animals table, then roll back the transaction.
+DELETE FROM animals;
+ROLLBACK;
