@@ -82,16 +82,6 @@ To run the project, execute the queries in the files:
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 ## 👥 Authors <a name="authors"></a>
