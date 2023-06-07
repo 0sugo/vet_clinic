@@ -44,3 +44,9 @@ ROLLBACK TO svp1;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
 -- Commit transaction
 COMMIT;
+
+
+-- Write queries to answer the following questions:
+-- How many animals are there?
+SELECT COUNT(id) FROM animals;
+
