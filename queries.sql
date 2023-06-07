@@ -17,10 +17,8 @@ ROLLBACK;
 BEGIN;
 -- Update the animals table by setting the species column to digimon for all animals that have a name ending in mon.
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon%';
-
 -- Update the animals table by setting the species column to pokemon for all animals that don't have species already set.
 UPDATE animals SET species = 'pokeman' WHERE species !='digimon'OR species IS NULL;
-
 -- Commit the transaction.
 COMMIT;
 
@@ -47,7 +45,10 @@ COMMIT;
 
 
 -- Write queries to answer the following questions:
+
 -- How many animals are there?
 SELECT COUNT(id) FROM animals;
 -- How many animals have never tried to escape?
 SELECT COUNT(escape_attempts) FROM animals WHERE escape_attempts = 0;
+-- What is the average weight of animals?
+SELECT AVG(weight_kg) FROM animals;
