@@ -6,3 +6,9 @@ SELECT name, escape_attempts FROM animals WHERE weight_kg>10.5;
 SELECT * FROM animals WHERE neutered=B'1';
 SELECT * FROM animals WHERE name!='Gabumon';
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+-- TRANSACTION 1
+BEGIN;
+-- Update the animals table by setting the species column to digimon for all animals that have a name ending in mon.
+UPDATE animals SET species = 'unspecified';
+ROLLBACK;
