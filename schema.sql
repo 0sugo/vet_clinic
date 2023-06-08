@@ -32,3 +32,6 @@ CREATE TABLE vets (id SERIAL PRIMARY KEY , name VARCHAR NOT NULL,age INT NOT NUL
 -- many-to-many relationship between the tables species and vets
 CREATE TABLE specializations (vet_id INT NOT NULL, species_id INT NOT NULL, CONSTRAINT fk_vet FOREIGN KEY (vet_id) REFERENCES vets(id),CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id));
 
+--many-to-many relationship between the tables animals and vets
+CREATE TABLE visits(vets_id INT NOT NULL, animals_id INT NOT NULL , CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id) , CONSTRAINT fk_animals FOREIGN KEY(animals_id) REFERENCES animals(id));
+
