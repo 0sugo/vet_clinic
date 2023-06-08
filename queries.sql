@@ -73,3 +73,5 @@ SELECT species.name ,COUNT(animals.name) FROM animals JOIN species ON animals.sp
 SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id JOIN species ON animals.species_id =species.id WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
 -- List all animals owned by Dean Winchester that haven't tried to escape.
 SELECT animals.name  from animals JOIN owners ON animals.owner_id = owners.id WHERE owners.full_name = 'Dean Winchester'AND animals.escape_attempts = 0;
+-- Who owns the most animals?
+SELECT owners.full_name, COUNT(animals.name) as animal_count FROM animals JOIN owners ON animals.owner_id = owners.id GROUP BY owners.full_name ORDER BY animal_count DESC LIMIT 1;
