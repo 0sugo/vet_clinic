@@ -63,3 +63,5 @@ SELECT species,AVG(escape_attempts),date_of_birth FROM animals WHERE date_of_bir
 
 -- What animals belong to Melody Pond?
 SELECT name FROM animals INNER JOIN owners ON animals.owner_id = owners.id WHERE owners.full_name= 'Melody Pond';
+-- List of all animals that are pokemon (their type is Pokemon).
+SELECT animals.name FROM animals INNER JOIN species ON animals.species_id = species.id WHERE species.name = 'Pokemon';
