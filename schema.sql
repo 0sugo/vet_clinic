@@ -8,3 +8,20 @@ CREATE TABLE animals(
 );
 -- Add new column species
 ALTER TABLE animals ADD species VARCHAR (255);
+
+-- Create new table owners
+CREATE TABLE owners(id SERIAL PRIMARY KEY,full_name VARCHAR NOT NULL,age INT NOT NULL);
+
+-- Create new table species
+CREATE TABLE species(id SERIAL PRIMARY KEY, name VARCHAR NOT NULL);
+
+-- Drop species column in animal table
+ALTER TABLE animals DROP species;
+
+-- Add column species_id which is a foreign key referencing species table
+ALTER TABLE animals ADD species_id INT;
+ALTER TABLE animals ADD CONSTRAINT fk_1 FOREIGN KEY (species_id) REFERENCES species(id);
+
+-- Add column owner_id which is a foreign key referencing owners table
+ALTER TABLE animals ADD owner_id INT;
+ALTER TABLE animals ADD CONSTRAINT fk_2 FOREIGN KEY (owner_id) REFERENCES owners (id);
