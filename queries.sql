@@ -67,3 +67,5 @@ SELECT name FROM animals INNER JOIN owners ON animals.owner_id = owners.id WHERE
 SELECT animals.name FROM animals INNER JOIN species ON animals.species_id = species.id WHERE species.name = 'Pokemon';
 -- List all owners and their animals, remember to include those that don't own any animal.
 SELECT full_name , name FROM owners LEFT JOIN animals ON owners.id = animals.owner_id;
+-- How many animals are there per species?
+SELECT species.name ,COUNT(animals.name) FROM animals JOIN species ON animals.species_id = species.id GROUP BY species.name;
