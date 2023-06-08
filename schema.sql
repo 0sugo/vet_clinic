@@ -8,3 +8,6 @@ CREATE TABLE animals(
 );
 -- Add new column species
 ALTER TABLE animals ADD species VARCHAR (255);
+
+-- Create new table owners
+CREATE TABLE owners(id SERIAL PRIMARY KEY,full_name VARCHAR NOT NULL,age INT NOT NULL);
