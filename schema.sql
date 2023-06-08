@@ -35,3 +35,5 @@ CREATE TABLE specializations (vet_id INT NOT NULL, species_id INT NOT NULL, CONS
 --many-to-many relationship between the tables animals and vets
 CREATE TABLE visits(vets_id INT NOT NULL, animals_id INT NOT NULL , CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id) , CONSTRAINT fk_animals FOREIGN KEY(animals_id) REFERENCES animals(id));
 
+-- Insert the following data for vets:
+INSERT INTO vets (name,age,date_of_graduation) VALUES ('William Tatcher' , 45 , '2000-04-23'),('Maisy Smith' , 26 , '2019-01-17'),('Stephanie Mendez' , 64 , '1981-05-04'),('Jack Harkness' , 38 , '2008-06-08');
