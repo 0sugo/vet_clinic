@@ -82,3 +82,5 @@ SELECT owners.full_name, COUNT(animals.name) as animal_count FROM animals JOIN o
 SELECT vets.name,animals.name FROM animals JOIN visits  ON animals.id = visits.animals_id RIGHT JOIN vets ON visits.vets_id = vets.id WHERE vets.name='William Tatcher' ORDER BY visit_date DESC LIMIT 1;
 --How many different animals did Stephanie Mendez see?
 SELECT COUNT(animals.name),vets.name from animals JOIN visits ON animals.id = visits.animals_id JOIN vets ON visits.vets_id=vets.id WHERE vets.name='Stephanie Mendez' GROUP BY vets.name;
+-- List all vets and their specialties, including vets with no specialties.
+vet_clinic=# SELECT vets.name, species.name FROM vets LEFT JOIN specializations ON vets.id = specializations.vet_id LEFT JOIN species ON specializations.species_id=species.id;
