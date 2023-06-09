@@ -75,3 +75,9 @@ SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id JOI
 SELECT animals.name  from animals JOIN owners ON animals.owner_id = owners.id WHERE owners.full_name = 'Dean Winchester'AND animals.escape_attempts = 0;
 -- Who owns the most animals?
 SELECT owners.full_name, COUNT(animals.name) as animal_count FROM animals JOIN owners ON animals.owner_id = owners.id GROUP BY owners.full_name ORDER BY animal_count DESC LIMIT 1;
+
+-- Write queries to answer the following:(DIFFERENT RELATIONSHIPS)
+
+-- Who was the last animal seen by William Tatcher?
+SELECT vets.name,animals.name FROM animals JOIN visits  ON animals.id = visits.animals_id RIGHT JOIN vets ON visits.vets_id = vets.id WHERE vets.name='William Tatcher' ORDER BY visit_date DESC LIMIT 1;
+
