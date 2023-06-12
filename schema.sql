@@ -34,7 +34,3 @@ CREATE TABLE specializations (vet_id INT NOT NULL, species_id INT NOT NULL, CONS
 
 --many-to-many relationship between the tables animals and vets
 CREATE TABLE visits(vets_id INT NOT NULL, animals_id INT NOT NULL , visit_date DATE NOT NULL, CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id) , CONSTRAINT fk_animals FOREIGN KEY(animals_id) REFERENCES animals(id));
-
-
--- create index for visit -animal_id column
-CREATE INDEX idx_animal_id ON visits (animal_id);
