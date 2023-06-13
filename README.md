@@ -92,6 +92,12 @@ To run the project, execute the queries in the files:
 - Twitter: [@0sugo5](https://twitter.com/osugo5)
 - LinkedIn: [Joseck Osugo](https://www.linkedin.com/in/joseck-osugo/)
 
+👤 **Spencer Okyere**
+
+- GitHub: [@skabeo](https://github.com/skabeo)
+- Twitter: [@black_okyere](https://twitter.com/black_okyere)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/spencer-okyere)
+
 
 <!-- FUTURE FEATURES -->
 
