@@ -41,7 +41,6 @@
 
 <!-- Features -->
 <!-- Features -->
-<!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
